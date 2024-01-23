@@ -8,6 +8,7 @@ export const revalidate = 0;
 
 export default async function Home() {
   const songs = await getSongs();
+
   return (
     <div className='
     bg-neutral-900
@@ -37,10 +38,10 @@ export default async function Home() {
         mt-4
         '
         >
-          <ListItem
-          image='/images/liked.png'
-          name="Liked Songs"
-          href='liked'
+          <ListItem 
+            name="Liked Songs" 
+            image="/images/liked.png" 
+            href="liked" 
           />
         </div>
         </div>

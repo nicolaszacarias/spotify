@@ -5,8 +5,8 @@ export interface Song {
     user_id: string;
     author: string;
     title: string;
-    song_paht: string;
-    image_paht: string;
+    song_path: string;
+    image_path: string;
 }
 
 export interface UserDetails {
@@ -36,13 +36,17 @@ export interface Price {
     active?: boolean;
     description?: string;
     unit_amount?: number;
-    currency?: number;
+    currency?: string;
     type?: Stripe.Price.Type
     interval?: Stripe.Price.Recurring.Interval
     interval_count?: number;
     trial_period_days?: number | null;
     metadata?: Stripe.Metadata;
     products?: Product;
+}
+
+export interface ProductWithPrice extends Product {
+    prices?: Price[];
 }
 
 
